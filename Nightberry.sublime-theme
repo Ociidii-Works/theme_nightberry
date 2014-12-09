@@ -280,16 +280,16 @@
         "layer0.opacity": 0.5
     },
     {
+        // Unselected Row
         "class": "tree_row",
-        "layer0.texture": "Theme - Nightberry/resources/row_highlight_dark.png",
         "layer0.opacity": 0.0,
         "layer0.inner_margin": [1, 1]
     },
     {
         "class": "tree_row",
         "attributes": ["selected"],
-        "layer0.opacity": 0.8
-        // TODO: fix selected row color & shadow
+        "layer0.texture": "Theme - Nightberry/resources/row_highlight_dark.png",
+        "layer0.opacity": 1.0
     },
     {
         "class": "close_button",
@@ -327,11 +327,11 @@
 
     {
         "class": "sidebar_container",
-        "layer0.tint": [80, 80, 80],
+        "layer0.tint": [20, 21, 28], // #1E2229 Border between sidebar and gutter
         "layer0.opacity": 1.0,
-        "layer0.draw_center": false,
+        "layer0.draw_center": true,
         "layer0.inner_margin": [0, 0, 1, 0],
-        "content_margin": [0, 0, 1, 0]
+        "content_margin": [0, 0, 1, 0],
     },
     {
         "class": "sidebar_tree",
@@ -345,9 +345,9 @@
     },
     {
         "class": "sidebar_heading",
-        "color": [130, 130, 130],
+        "color": [100, 100, 100],
         "font.bold": true,
-        "shadow_color": [250, 250, 250],
+        "shadow_color": [27, 31, 38],
         "shadow_offset": [0, 1]
     },
     {
@@ -360,16 +360,16 @@
     },
     {
         "class": "sidebar_label",
-        "color": [0, 0, 0],
+        "color": [95, 95, 95],
         "font.bold": false,
-        "font.italic": false
-        // , "shadow_color": [250, 250, 250], "shadow_offset": [0, 0]
+        "font.italic": false,
+        "shadow_color": [35, 35, 35], "shadow_offset": [0, 1]
     },
     {
         "class": "sidebar_label",
         "parents": [{"class": "tree_row", "attributes": ["selected"]}],
-        "color": [255, 255, 255]
-        // , "shadow_color": [60, 60, 60], "shadow_offset": [0, 1]
+        "color": [170, 170, 170],
+        "shadow_color": [35, 35, 35], "shadow_offset": [0, 1]
     },
 
     {
@@ -406,24 +406,48 @@
     },
 
     {
+        // Text input field item
         "class": "text_line_control",
         "layer0.texture": "Theme - Nightberry/resources/input_field.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.0,
         "layer0.inner_margin": [4, 5, 4, 3],
+        //"content_margin": [3, 3, 6, 3],
 
+        // Text input dropdown
         "layer1.texture": "Theme - Nightberry/resources/input_field_shadow.png",
-        "layer1.opacity": 1.0,
+        "layer1.opacity": 0.0,
         "layer1.inner_margin": [4, 5, 4, 3],
         "tint_index": 1,
-
         "content_margin": [3, 3, 3, 3]
     },
+        {
+        "class": "dropdown_button_control",
+        "attributes": ["hover"],
+        "layer0.texture": "Theme - Petroleum/resources/text-field-list-hover.png"
+    },
+    //Text input field item
+//    {
+//        "class": "text_line_control",
+//        "layer0.texture": "Theme - Nightberry/resources/input_field.png",
+//        "layer0.opacity": 1.0,
+//        "layer0.inner_margin": [4, 5, 4, 3],
+//        "content_margin": [3, 3, 6, 3]
+//    },\
+//
+//    // Text input dropdown
+//    {
+//        "class": "dropdown_button_control",
+//        "content_margin": [8, 8],
+//        "layer1.texture": "Theme - Nightberry/resources/input_field_shadow.png",
+//        "layer0.opacity": 1.0,
+//        "layer0.inner_margin": [4, 4]
+//    },
     {
         "class": "status_bar",
         "layer0.texture": "Theme - Nightberry/resources/status_bar.png",
         "layer0.opacity": 1.0,
         "layer0.inner_margin": [2, 2],
-        "content_margin": [4, 2, 4, 0]
+        "content_margin": [4, 0, 2, 0]
     },
     {
         "class": "status_container",
@@ -431,12 +455,12 @@
     },
     {
         "class": "status_button",
-        "layer0.tint": [125, 125, 125],
+        "layer0.tint": [23, 25, 33],
         "layer0.opacity": 1.0,
         "layer0.draw_center": false,
         "layer0.inner_margin": [1, 0, 0, 0],
         "content_margin": [10, 2, 10, 3],
-        "min_size": [75, 0]
+        "min_size": [25, 0]
     },
 
     // Quick Panel
@@ -496,16 +520,16 @@
     {
         "class": "auto_complete",
         "row_padding": [2, 0],
-        "layer0.tint": [255, 255, 255],
+        "layer0.tint": [35, 39, 46],
         "layer0.opacity": 1.0,
         "dark_content": false
     },
     {
         "class": "auto_complete_label",
-        "fg": [72, 72, 72, 255],
-        "match_fg": [0, 0, 0, 255],
-        "selected_fg": [72, 72, 72, 255],
-        "selected_match_fg": [0, 0, 0, 255]
+        "fg": [100, 100, 100, 255],
+        "match_fg": [135, 135, 135, 255],
+        "selected_fg": [120, 120, 120, 255],
+        "selected_match_fg": [240, 240, 240, 255]
     },
 
     {
@@ -525,7 +549,7 @@
         "layer1.opacity": 1.0,
 
         "content_margin": [3, 0, 3, 1],
-        "tab_overlap": 17,
+        "tab_overlap": 22,
         "tab_width": 180,
         "tab_min_width": 48,
         "tab_height": 35,
@@ -565,7 +589,7 @@
         "layer0.inner_margin": [22, 4],
         "layer0.opacity": 1.0,
         "tint_index": 0,        // tint layer 0
-        "tint_modifier": [255, 0, 0, 0],
+        //"tint_modifier": [255, 0, 0, 0],
 
         "layer1.texture": "",
         "layer1.inner_margin": [22, 4],
@@ -638,14 +662,14 @@
     {
         "class": "tab_label",
         "fg": [0, 0, 0, 255],
-        "shadow_color": [255, 255, 255, 80],
+        "shadow_color": [150, 150, 150, 80],
         "shadow_offset": [0, 1],
         "font.italic": false
     },
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["file_medium"]}],
-        "fg": [255, 255, 255, 180],
+        "fg": [150, 150, 150, 180],
         "shadow_color": [0, 0, 0, 100],
         "shadow_offset": [0, -1]
     },
@@ -659,21 +683,23 @@
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["selected", "file_medium"]}],
-        "fg": [255, 255, 255, 255],
+        "fg": [150, 150, 150, 255],
         "shadow_color": [0, 0, 0, 100],
         "shadow_offset": [0, -1]
     },
     {
+        // Tab Inactive Label
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["file_medium_dark"]}],
-        "fg": [255, 255, 255, 140],
+        "fg": [120, 120, 120, 140],
         "shadow_color": [0, 0, 0, 100],
         "shadow_offset": [0, -1]
     },
     {
+        // Tab Active Label
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["selected", "file_medium_dark"]}],
-        "fg": [255, 255, 255, 230],
+        "fg": [175, 175, 175, 230],
         "shadow_color": [0, 0, 0, 255],
         "shadow_offset": [0, -1]
     },
@@ -697,28 +723,28 @@
         "parents": [{"class": "tab_control", "attributes": ["file_light"]}],
         "attributes": ["dirty"],
         "settings": ["highlight_modified_tabs"],
-        "fg": [255, 23, 0]
+        "fg": [190, 82, 57]
     },
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["file_medium"]}],
         "attributes": ["dirty"],
         "settings": ["highlight_modified_tabs"],
-        "fg": [255, 23, 0]
+        "fg": [210, 63, 87]
     },
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["file_medium_dark"]}],
         "attributes": ["dirty"],
         "settings": ["highlight_modified_tabs"],
-        "fg": [255, 161, 52]
+        "fg": [210, 63, 87]
     },
     {
         "class": "tab_label",
         "parents": [{"class": "tab_control", "attributes": ["file_dark"]}],
         "attributes": ["dirty"],
         "settings": ["highlight_modified_tabs"],
-        "fg": [255, 161, 52]
+        "fg": [210, 63, 87]
     },
     {
         "class": "tab_label",
@@ -947,61 +973,61 @@
     {
         "class": "icon_regex",
         "layer0.texture": "Theme - Nightberry/resources/icons/find_regex.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_case",
         "layer0.texture": "Theme - Nightberry/resources/icons/find_case.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_highlight",
         "layer0.texture": "Theme - Nightberry/resources/icons/find_highlight.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_in_selection",
         "layer0.texture": "Theme - Nightberry/resources/icons/find_inselection.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_reverse",
         "layer0.texture": "Theme - Nightberry/resources/icons/find_reverse.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_whole_word",
         "layer0.texture": "Theme - Nightberry/resources/icons/find_wholeword.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_wrap",
         "layer0.texture": "Theme - Nightberry/resources/icons/find_wrap.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_preserve_case",
         "layer0.texture": "Theme - Nightberry/resources/icons/replace_preserve_case.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_context",
         "layer0.texture": "Theme - Nightberry/resources/icons/context.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
     {
         "class": "icon_use_buffer",
         "layer0.texture": "Theme - Nightberry/resources/icons/use_buffer.png",
-        "layer0.opacity": 1.0,
+        "layer0.opacity": 0.4,
         "content_margin": [8, 8]
     },
 
