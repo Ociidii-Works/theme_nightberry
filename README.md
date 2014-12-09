@@ -2,7 +2,7 @@
 
 A theme to complement our Pastel-Paw color Scheme for Sublime Text 3.
 
-In truth, I just wanted a darker variant of the default theme that didn't break the features I liked about the stock theme.
+In truth, I just wanted a darker variant of the stock theme that didn't break the things I liked about it.
 
 ## Design
 
