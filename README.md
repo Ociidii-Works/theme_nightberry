@@ -8,6 +8,8 @@ In truth, I just wanted a darker variant of the default theme that didn't break 
 
 Nightberry is designed to work with the latest verion of Sublime Text, [Sublime Text 3](http://www.sublimetext.com/3dev).
 
+#### Current progress:
+
  [![Preview][thumb]][full]
 
  The font used is Monaco (TTF version)
