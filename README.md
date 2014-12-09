@@ -54,11 +54,10 @@ To configure Sublime Text to use the theme, follow the instructions below for yo
 
 ## Extras
 
-### Syntax Highlighting Colour Schemes
+### Syntax Highlighting Colour Scheme
 
-We recommend using [Pastel-Paws](https://github.com/Ociidii-Works/pastel_paws) (Nightberry variant) as a color scheme since they are meant to be used together.
+Nightberry comes with its own color scheme, forked from our very own [Pastel-Paws](https://github.com/Ociidii-Works/pastel_paws).
 
-* Download Pastel Paws through Package Control
 * Enable the colour scheme via `Preferences -> Color Scheme -> User`
 
 ## License
